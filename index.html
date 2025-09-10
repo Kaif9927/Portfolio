@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mohd Kaif - Full Stack Developer & Entrepreneur. Specializing in React, Python, Machine Learning, and AI. View my portfolio, projects, and get in touch.">
+    <meta name="keywords" content="Mohd Kaif, Full Stack Developer, React, Python, Machine Learning, AI, Portfolio, Web Development, Software Engineer">
+    <meta name="author" content="Mohd Kaif">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Mohd Kaif - Full Stack Developer & Entrepreneur">
+    <meta property="og:description" content="Portfolio showcasing my skills in Full Stack Development, Machine Learning, and AI. View my projects and get in touch.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mohd-kaif-portfolio.netlify.app">
+    <meta property="og:image" content="https://mohd-kaif-portfolio.netlify.app/profile-image.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mohd Kaif - Full Stack Developer & Entrepreneur">
+    <meta name="twitter:description" content="Portfolio showcasing my skills in Full Stack Development, Machine Learning, and AI.">
+    <meta name="twitter:image" content="https://mohd-kaif-portfolio.netlify.app/profile-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <title>Mohd Kaif - Full Stack Developer & Entrepreneur</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mohd Kaif",
+        "jobTitle": "Full Stack Developer & Entrepreneur",
+        "description": "Full Stack Developer specializing in React, Python, Machine Learning, and AI",
+        "url": "https://mohd-kaif-portfolio.netlify.app",
+        "sameAs": [
+            "https://github.com/Kaif9927",
+            "https://www.linkedin.com/in/mohd-kaif-12762b256",
+            "https://leetcode.com/u/Kaif909/"
+        ],
+        "knowsAbout": [
+            "Full Stack Development",
+            "Machine Learning",
+            "Artificial Intelligence",
+            "React",
+            "Python",
+            "TypeScript",
+            "Node.js"
+        ],
+        "alumniOf": "Indian Institute of Information Technology, Kalyani",
+        "email": "Mohdkaifa909@gmail.com",
+        "telephone": "+91-9193581958"
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">MK</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="profile-image.jpg" alt="Mohd Kaif - Full Stack Developer" class="profile-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiByeD0iMTUwIiBmaWxsPSJ1cmwoI3BhaW50MF9saW5lYXJfMF8xKSIvPgo8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxMjAiIHI9IjQwIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIwIDIwMEMxMjAgMTgwIDEzNSAxNjUgMTUwIDE2NUMxNjUgMTY1IDE4MCAxODAgMTgwIDIwMEwxMjAgMjAwWiIgZmlsbD0id2hpdGUiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhcl8wXzEiIHgxPSIwIiB5MT0iMCIgeDI9IjMwMCIgeTI9IjMwMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjMjU2M2ViIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzdjM2FlZCIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo='">
+                </div>
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        I am a Entrepreneur and Software Developer specializing in building exceptional digital experiences. Transforming ideas into elegant solutions through clean code and innovative design.
+                    </h1>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">1+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Projects Delivered</span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="technologies">
+        <div class="container">
+            <h2 class="section-title">Technologies I Work With</h2>
+            <div class="tech-categories">
+                <!-- Programming Languages -->
+                <div class="tech-category">
+                    <h3 class="category-title">Programming Languages</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fas fa-code"></i>
+                            <span>C++</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-code"></i>
+                            <span>C</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend Technologies -->
+                <div class="tech-category">
+                    <h3 class="category-title">Frontend Development</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-bootstrap"></i>
+                            <span>Bootstrap</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>Tailwind CSS</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-bolt"></i>
+                            <span>Vite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend & Database -->
+                <div class="tech-category">
+                    <h3 class="category-title">Backend & Database</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-python"></i>
+                            <span>Flask</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-server"></i>
+                            <span>Express.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Science & ML -->
+                <div class="tech-category">
+                    <h3 class="category-title">Data Science & Machine Learning</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>NumPy</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Pandas</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Scikit-Learn</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>Matplotlib</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-chart-area"></i>
+                            <span>Seaborn</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security & Cryptography -->
+                <div class="tech-category">
+                    <h3 class="category-title">Security & Cryptography</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>AES Encryption</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-lock"></i>
+                            <span>PyCryptodome</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-key"></i>
+                            <span>Security Algorithms</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud & Deployment -->
+                <div class="tech-category">
+                    <h3 class="category-title">Cloud & Deployment</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>Render</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>Vercel</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-globe"></i>
+                            <span>Netlify</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-train"></i>
+                            <span>Railway</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <span>Cloudinary</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Others -->
+                <div class="tech-category">
+                    <h3 class="category-title">Tools & Others</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git/GitHub</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-code-branch"></i>
+                            <span>Version Control</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-desktop"></i>
+                            <span>Electron</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-spider"></i>
+                            <span>Web Scraping</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-upload"></i>
+                            <span>Multer</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-robot"></i>
+                            <span>BotPress</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2 class="section-title">About Me</h2>
+                        <p class="about-intro">
+                            My name is <strong>Mohd Kaif</strong>, a Full-Stack Developer passionate about building comprehensive digital solutions. Currently pursuing B.Tech in Computer Science Engineering at Indian Institute of Information Technology, Kalyani (IIITK), I specialize in creating modern websites, robust applications, and scalable systems that drive business growth and efficiency.
+                        </p>
+                        <p class="about-expertise">
+                            My expertise spans across the full development stack, from crafting intuitive user interfaces to implementing complex backend systems. I focus on delivering high-performance solutions that combine clean code architecture with exceptional user experiences, helping businesses streamline their operations and achieve their digital transformation goals.
+                        </p>
+                    </div>
+                    <div class="about-images">
+                        <div class="image-gallery">
+                            <img src="about-image-1.jpg" alt="Mohd Kaif working on project" class="gallery-img" onerror="this.style.display='none'">
+                            <img src="about-image-2.jpg" alt="Mohd Kaif at hackathon" class="gallery-img" onerror="this.style.display='none'">
+                            <img src="about-image-3.jpg" alt="Mohd Kaif presenting" class="gallery-img" onerror="this.style.display='none'">
+                        </div>
+                    </div>
+                </div>
+                    <div class="skills-section">
+                        <h3>Technical Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fas fa-code"></i>
+                                <span>Full Stack Development (MERN)</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-brain"></i>
+                                <span>Machine Learning & AI</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Cryptography & Security (AES)</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Data Science & Analysis</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-database"></i>
+                                <span>Database Management (SQL, MongoDB)</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-cloud"></i>
+                                <span>Cloud Services & Deployment</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Mobile App Development</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-spider"></i>
+                                <span>Web Scraping & Data Extraction</span>
+                            </div>
+                        </div>
+                        
+                        <h3>Soft Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Problem Solving</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-users"></i>
+                                <span>Leadership & Team Management</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-comments"></i>
+                                <span>Communication</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-handshake"></i>
+                                <span>Teamwork & Collaboration</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-search"></i>
+                                <span>Critical Thinking</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-network-wired"></i>
+                                <span>Networking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DSA & Competitive Programming Section -->
+    <section class="dsa-section">
+        <div class="container">
+            <h2 class="section-title">Data Structures & Algorithms</h2>
+            <div class="dsa-content">
+                <div class="dsa-stats">
+                    <div class="dsa-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>200+</h3>
+                            <p>LeetCode Problems Solved</p>
+                        </div>
+                    </div>
+                    <div class="dsa-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Competitive</h3>
+                            <p>Programming Expert</p>
+                        </div>
+                    </div>
+                    <div class="dsa-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Advanced</h3>
+                            <p>Algorithm Design</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dsa-skills">
+                    <h3>Core Competencies</h3>
+                    <div class="dsa-skills-grid">
+                        <div class="dsa-skill-item">
+                            <i class="fas fa-sitemap"></i>
+                            <span>Data Structures</span>
+                        </div>
+                        <div class="dsa-skill-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Algorithm Design</span>
+                        </div>
+                        <div class="dsa-skill-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Time Complexity</span>
+                        </div>
+                        <div class="dsa-skill-item">
+                            <i class="fas fa-memory"></i>
+                            <span>Space Optimization</span>
+                        </div>
+                        <div class="dsa-skill-item">
+                            <i class="fas fa-search"></i>
+                            <span>Search Algorithms</span>
+                        </div>
+                        <div class="dsa-skill-item">
+                            <i class="fas fa-sort"></i>
+                            <span>Sorting Algorithms</span>
+                        </div>
+                        <div class="dsa-skill-item">
+                            <i class="fas fa-tree"></i>
+                            <span>Tree & Graph Algorithms</span>
+                        </div>
+                        <div class="dsa-skill-item">
+                            <i class="fas fa-puzzle-piece"></i>
+                            <span>Dynamic Programming</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dsa-links">
+                    <a href="https://leetcode.com/u/Kaif909/" target="_blank" class="dsa-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        View LeetCode Profile
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Cofounder & Developer</h3>
+                        <h4>Melted Bliss</h4>
+                        <span class="timeline-date">Feb 2025 - Present</span>
+                        <p>Led a team of 50 in planning and developing the structure of startup from scratch. This startup is based on dairy products of different animals like A2 cow, Indian Cow etc. Currently handling e-commerce websites like Amazon, Flipkart and working on mobile application development.</p>
+                        <div class="tech-used">
+                            <span class="tech-tag">Git</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">AES</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Render</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Web Developer</h3>
+                        <h4>Brandnexum</h4>
+                        <span class="timeline-date">Jun 2024</span>
+                        <p>Developed a company website that connects small business owners to different celebrities according to their needs. Created an introductory website with contact functionality, virtual support, and special features for physically disabled persons using Machine Learning.</p>
+                        <div class="tech-used">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Cloudinary</span>
+                            <span class="tech-tag">Git</span>
+                            <span class="tech-tag">Render</span>
+                            <span class="tech-tag">Vercel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="medipro-screenshot.jpg" alt="MEDIPRO Healthcare Platform" class="project-screenshot" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDQwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ1cmwoI3BhaW50MF9saW5lYXJfMF8xKSIvPgo8Y2lyY2xlIGN4PSIxMDAiIGN5PSI1MCIgcj0iMjAiIGZpbGw9IiNmZmZmZmYiLz4KPHBhdGggZD0iTTkwIDQ1SDEwVjU1SDkwVjQ1WiIgZmlsbD0iI2ZmZmZmZiIvPgo8cGF0aCBkPSJNMTUgNDVIMjVWNTVIMTVWNDVaIiBmaWxsPSIjZmZmZmZmIi8+CjxwYXRoIGQ9Ik0yMCA0MEgzMFY1MEgyMFY0MFoiIGZpbGw9IiNmZmZmZmYiLz4KPHJlY3QgeD0iMTUwIiB5PSIzMCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSI0MCIgcng9IjUiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC45KSIvPgo8dGV4dCB4PSIxNjAiIHk9IjU1IiBmaWxsPSIjMjU2M2ViIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSJib2xkIj5NRURJUHJvPC90ZXh0Pgo8cmVjdCB4PSIxNTAiIHk9IjkwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMwIiByeD0iMyIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjgpIi8+Cjx0ZXh0IHg9IjE2MCIgeT0iMTEwIiBmaWxsPSIjNDY1NTY1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTIiPkFJLVBvd2VyZWQgRGlzZWFzZSBQcmVkaWN0aW9uPC90ZXh0Pgo8Y2lyY2xlIGN4PSIzNTAiIGN5PSI1MCIgcj0iMTUiIGZpbGw9IiNmZmZmZmYiLz4KPHBhdGggZD0iTTM0MCA0NUgzNjBWNTVIMzQwVjQ1WiIgZmlsbD0iI2ZmZmZmZiIvPgo8cGF0aCBkPSJNMzQ1IDQwSDM1NVY1MEgzNDVWNDBaIiBmaWxsPSIjZmZmZmZmIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXJfMF8xIiB4MT0iMCIgeTE9IjAiIHgyPSI0MDAiIHkyPSIyMDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzI1NjNlYiIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM3YzNhZWQiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K'; this.style.display='block'; this.nextElementSibling.style.display='none';">
+                        <div class="project-icon-fallback" style="display: none;">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>MEDIPRO</h3>
+                        <p>Flask and Crypto-based Healthcare Platform with ML Disease Prediction. Developed a comprehensive healthcare management system with dual-layer authentication using AES encryption and machine learning-powered disease prediction system.</p>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>AI-powered disease prediction with 132 symptoms across 41 diseases</li>
+                                <li>Dual-layer authentication using AES encryption</li>
+                                <li>Secure file management for medical documents</li>
+                                <li>Multi-user authentication system</li>
+                                <li>Random Forest Classifier for ML predictions</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">AES Encryption</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">PyCryptodome</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">NumPy</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://medipro.up.railway.app/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/Kaif9927/Medpro" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="vision-io-screenshot.jpg" alt="Vision.io Portfolio" class="project-screenshot" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDQwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ1cmwoI3BhaW50MF9saW5lYXJfMF8xKSIvPgo8Y2lyY2xlIGN4PSIxMDAiIGN5PSI1MCIgcj0iMjAiIGZpbGw9IiNmZmZmZmYiLz4KPHBhdGggZD0iTTkwIDQ1SDEwVjU1SDkwVjQ1WiIgZmlsbD0iI2ZmZmZmZiIvPgo8cGF0aCBkPSJNMTUgNDVIMjVWNTVIMTVWNDVaIiBmaWxsPSIjZmZmZmZmIi8+CjxwYXRoIGQ9Ik0yMCA0MEgzMFY1MEgyMFY0MFoiIGZpbGw9IiNmZmZmZmYiLz4KPHJlY3QgeD0iMTUwIiB5PSIzMCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSI0MCIgcng9IjUiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC45KSIvPgo8dGV4dCB4PSIxNjAiIHk9IjU1IiBmaWxsPSIjMjU2M2ViIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSJib2xkIj5WaXNpb24uaW88L3RleHQ+CjxyZWN0IHg9IjE1MCIgeT0iOTAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMzAiIHJ4PSIzIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuOCkiLz4KPHRleHQgeD0iMTYwIiB5PSIxMTAiIGZpbGw9IiM0NjU1NjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiI+UG9ydGZvbGlvIGZvciBEYXJrIERldmVsb3BlcnM8L3RleHQ+CjxjaXJjbGUgY3g9IjM1MCIgY3k9IjUwIiByPSIxNSIgZmlsbD0iI2ZmZmZmZiIvPgo8cGF0aCBkPSJNMzQwIDQ1SDM2MFY1NUgzNDBWNDVaIiBmaWxsPSIjZmZmZmZmIi8+CjxwYXRoIGQ9Ik0zNDUgNDBIMzU1VjUwSDM0NVY0MFoiIGZpbGw9IiNmZmZmZmYiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhcl8wXzEiIHgxPSIwIiB5MT0iMCIgeDI9IjQwMCIgeTI9IjIwMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjMjU2M2ViIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzdjM2FlZCIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo='; this.style.display='block'; this.nextElementSibling.style.display='none';">
+                        <div class="project-icon-fallback" style="display: none;">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Vision.io</h3>
+                        <p>A modern portfolio platform designed specifically for dark developers. Built with TypeScript, Vite, and Tailwind CSS, featuring a sleek dark theme and responsive design for showcasing developer portfolios.</p>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Dark theme optimized for developers</li>
+                                <li>TypeScript for type safety and better development experience</li>
+                                <li>Vite for fast development and building</li>
+                                <li>Tailwind CSS for utility-first styling</li>
+                                <li>Responsive design for all devices</li>
+                                <li>Modern component-based architecture</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Vite</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Drizzle ORM</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Kaif9927/vision.io" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                            <a href="https://vision-io-demo.vercel.app" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="interview-ai-screenshot.jpg" alt="Interview AI Platform" class="project-screenshot" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDQwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ1cmwoI3BhaW50MF9saW5lYXJfMF8xKSIvPgo8Y2lyY2xlIGN4PSIxMDAiIGN5PSI1MCIgcj0iMjAiIGZpbGw9IiNmZmZmZmYiLz4KPHBhdGggZD0iTTkwIDQ1SDEwVjU1SDkwVjQ1WiIgZmlsbD0iI2ZmZmZmZiIvPgo8cGF0aCBkPSJNMTUgNDVIMjVWNTVIMTVWNDVaIiBmaWxsPSIjZmZmZmZmIi8+CjxwYXRoIGQ9Ik0yMCA0MEgzMFY1MEgyMFY0MFoiIGZpbGw9IiNmZmZmZmYiLz4KPHJlY3QgeD0iMTUwIiB5PSIzMCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSI0MCIgcng9IjUiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC45KSIvPgo8dGV4dCB4PSIxNjAiIHk9IjU1IiBmaWxsPSIjMjU2M2ViIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSJib2xkIj5JbnRlcnZpZXcgQUk8L3RleHQ+CjxyZWN0IHg9IjE1MCIgeT0iOTAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMzAiIHJ4PSIzIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuOCkiLz4KPHRleHQgeD0iMTYwIiB5PSIxMTAiIGZpbGw9IiM0NjU1NjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiI+QUktUG93ZXJlZCBJbnRlcnZpZXcgQXV0b21hdGlvbjwvdGV4dD4KPGNpcmNsZSBjeD0iMzUwIiBjeT0iNTAiIHI9IjE1IiBmaWxsPSIjZmZmZmZmIi8+CjxwYXRoIGQ9Ik0zNDAgNDVIMzYwVjU1SDM0MFY0NVoiIGZpbGw9IiNmZmZmZmYiLz4KPHBhdGggZD0iTTM0NSA0MEgzNTVWNTAzNDVWNDBaIiBmaWxsPSIjZmZmZmZmIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXJfMF8xIiB4MT0iMCIgeTE9IjAiIHgyPSI0MDAiIHkyPSIyMDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzI1NjNlYiIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM3YzNhZWQiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K'; this.style.display='block'; this.nextElementSibling.style.display='none';">
+                        <div class="project-icon-fallback" style="display: none;">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Interview AI</h3>
+                        <p>Interview AI automates hiring with smart, unbiased interviews. Using AI, it analyzes responses, behavior, and skills to deliver insights and rankings. Save time, reduce bias, and hire smarter—ideal for HR teams, startups, and institutions seeking efficient recruitment.</p>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>AI-powered interview automation and analysis</li>
+                                <li>Unbiased candidate evaluation and ranking</li>
+                                <li>Real-time response analysis and behavior tracking</li>
+                                <li>Cross-platform desktop application using Electron</li>
+                                <li>Advanced AI integration with Gemini API</li>
+                                <li>Comprehensive candidate insights and reporting</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Electron</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">Gemini API</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Vite</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Kaif9927/Interview-AI" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                            <a href="https://interview-ai-demo.vercel.app" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Personal Portfolio Website</h3>
+                        <p>Built a responsive portfolio using frontend technologies to showcase projects, skills, and contact form. Features modern design with smooth animations and mobile-first approach.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://kaif9927.github.io/Bharat_Intern/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-content">
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>B.Tech in Computer Science Engineering</h3>
+                        <h4>Indian Institute of Information Technology, Kalyani (IIITK)</h4>
+                        <span class="education-date">2022 - 2026</span>
+                        <p>CGPA: 7.55 (Currently in 6th Semester)</p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>Class XII (PCMB)</h3>
+                        <h4>Motherland Public School, Saharanpur, UP (CBSE)</h4>
+                        <span class="education-date">2021</span>
+                        <p>Aggregate: 94.8%</p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>Class X</h3>
+                        <h4>Motherland Public School, Saharanpur, UP (CBSE)</h4>
+                        <span class="education-date">2019</span>
+                        <p>Aggregate: 90.4%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements">
+        <div class="container">
+            <h2 class="section-title">Achievements & Certifications</h2>
+            <div class="achievements-grid">
+                <div class="achievement-item">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Organizer</h3>
+                    <p>Status Code 1 Hackathon</p>
+                </div>
+                <div class="achievement-item">
+                    <i class="fas fa-code"></i>
+                    <h3>200+</h3>+ Problems Solved</h3>
+                    <p>LeetCode Competitive Programming</p>
+                </div>
+                <div class="achievement-item">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Google Cloud Course</h3>
+                    <p>Completed Google Cloud Certification</p>
+                </div>
+                <div class="achievement-item">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Postman API Course</h3>
+                    <p>Completed Postman API Certification</p>
+                </div>
+                <div class="achievement-item">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Graph Algorithms</h3>
+                    <p>AlgoUniversity Course Completion</p>
+                </div>
+                <div class="achievement-item">
+                    <i class="fas fa-medal"></i>
+                    <h3>Status Code 0</h3>
+                    <p>Participant Certificate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Relevant Coursework Section -->
+    <section class="coursework">
+        <div class="container">
+            <h2 class="section-title">Relevant Coursework</h2>
+            <div class="coursework-content">
+                <div class="coursework-grid">
+                    <div class="course-item">
+                        <i class="fas fa-cube"></i>
+                        <h3>Object Oriented Programming (OOP)</h3>
+                    </div>
+                    <div class="course-item">
+                        <i class="fas fa-desktop"></i>
+                        <h3>Operating System (OS)</h3>
+                    </div>
+                    <div class="course-item">
+                        <i class="fas fa-database"></i>
+                        <h3>Database Management System (DBMS)</h3>
+                    </div>
+                    <div class="course-item">
+                        <i class="fas fa-sitemap"></i>
+                        <h3>System Design</h3>
+                    </div>
+                    <div class="course-item">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Computer Networking (CN)</h3>
+                    </div>
+                    <div class="course-item">
+                        <i class="fas fa-project-diagram"></i>
+                        <h3>Data Structures and Algorithms (DSA)</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+91-9193581958</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>Mohdkaifa909@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Saharanpur, Uttar Pradesh, India</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h3>Send me a message</h3>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                    <div id="formStatus" class="form-status"></div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://github.com/Kaif9927" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mohd-kaif-12762b256" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://leetcode.com/u/Kaif909/" target="_blank" class="social-link">
+                        <i class="fas fa-code"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Mohd Kaif. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
